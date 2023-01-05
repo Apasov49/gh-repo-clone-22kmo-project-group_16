@@ -1,6 +1,6 @@
 const db = require('../database');
 const bcrypt = require('bcryptjs');
-const saltRounds=10;
+const saltRounds=12;
 
 const card = {
   getById: function(id, callback) {
