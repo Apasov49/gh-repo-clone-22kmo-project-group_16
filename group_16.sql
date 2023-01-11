@@ -74,6 +74,30 @@ LOCK TABLES `card` WRITE;
 INSERT INTO `card` VALUES (1,1,1,'$2a$12$ZDeLEqYtmUVpSz4G98CVd.BuYZ3krZ8ROmR61yl5yGwviNRsrL4bK',0),(2,1,2,'$2a$12$I4fw9h58W1YO6Js8GZWW7.H0XEFUiAw45NU6kBSb/.roqGg4odHK.',0),(3,2,3,'$2a$12$06jjl4WZ/BGuA7whFjk0NOGHnRhiBFovQb.Oj4MeUR5jsBQfwwmkW',0),(4,2,4,'$2a$12$HNQwbaENsmNfagumeGJ8GOG6h8R1PRr4OhB4qYfpGoGtMT7x/wjHa',0),(5,3,5,'$2a$12$0CGEyxH4eGB6hffSPQ5Pv.k.BLpL7VIbZ0P.YgIj3NYkIl/.DCWLu',0),(6,3,6,'$2a$12$0CGEyxH4eGB6hffSPQ5Pv.k.BLpL7VIbZ0P.YgIj3NYkIl/.DCWLu',0),(7,4,7,'1456',0),(8,4,8,'$2a$12$0CGEyxH4eGB6hffSPQ5Pv.k.BLpL7VIbZ0P.YgIj3NYkIl/.DCWLu',0),(9,5,9,'$2a$12$0CGEyxH4eGB6hffSPQ5Pv.k.BLpL7VIbZ0P.YgIj3NYkIl/.DCWLu',0),(10,5,10,'$2a$12$0CGEyxH4eGB6hffSPQ5Pv.k.BLpL7VIbZ0P.YgIj3NYkIl/.DCWLu',0);
 /*!40000 ALTER TABLE `card` ENABLE KEYS */;
 UNLOCK TABLES;
+--
+-- Table structure for table `card_type`
+--
+
+DROP TABLE IF EXISTS `card_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `card_type` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `type` varchar(25) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `type_UNIQUE` (`type`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `card_type`
+--
+
+LOCK TABLES `card_type` WRITE;
+/*!40000 ALTER TABLE `card_type` DISABLE KEYS */;
+INSERT INTO `card_type` VALUES (1,'Credit'),(2,'Debit');
+/*!40000 ALTER TABLE `card_type` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `client`
