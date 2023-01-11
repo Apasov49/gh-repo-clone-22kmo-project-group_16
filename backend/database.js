@@ -4,7 +4,7 @@ dotenv.config();
 const connection = mysql.createPool({
     host: '127.0.0.1',
     user: 'root',
-    password: 'Bias@1706',
+    password: 'root',
     database: 'group_16'
   });
 module.exports = connection;
